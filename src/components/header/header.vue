@@ -19,9 +19,9 @@
         </div>
 
       </div>
-      <div v-if="seller.supports.length" class="support-count">
+      <div v-if="seller.supports" class="support-count">
         <span class="count">{{seller.supports.length}}</span>
-        <i class=""
+        <i class="icon-keyboard_arrow_right"></i>
       </div>
     </div>
   </div>
