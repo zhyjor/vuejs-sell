@@ -14,7 +14,6 @@
       </div>
     </div>
 
-
     <keep-alive>
       <router-view :seller="seller"></router-view>
     </keep-alive>
@@ -22,9 +21,7 @@
 </template>
 
 <script>
-
   import header from './components/header/header.vue';
-
   export default {
     components: {
       'v-header': header
