@@ -33,7 +33,7 @@
                                                                 v-show="food.oldPrice">￥{{food.oldPrice}}</span>
                 </div>
                 <div class="cartcontrol-wrapper">
-                  <cartcontrol :food="food"></cartcontrol>
+                  <cartcontrol @add="addFood" :food="food"></cartcontrol>
                 </div>
               </div>
             </li>
@@ -131,6 +131,9 @@
         let foodList = this.$refs.foodList;
         let el = foodList[index];
         this.foodScroll.scrollToElement(el, 300);
+      },
+      addFood(target) {
+        this._drop(target);
       },
       _drop(target) {
         // 体验优化,异步执行下落动画
