@@ -49,9 +49,30 @@
         </div>
       </transition>
     </div>
+<<<<<<< HEAD
+    <div class="shopcart-list" v-show="listShow">
+      <div class="list-header"></div>
+      <h1 class="title">购物车</h1>
+      <span class="empty">清空</span>
+    </div>
+    <div class="list-content">
+      <ul>
+        <li class="food" v-for="food in selectFoods">
+          <span class="name">{{food.name}}</span>
+          <div class="price">
+            <span>￥{{food.price*food.count}}</span>
+          </div>
+          <div class="cartcontrol-wrapper">
+            <cartcontrol :food="food"></cartcontrol>
+          </div>
+        </li>
+      </ul>
+    </div>
+=======
     <transition name="fade">
       <div class="list-mask" @click="hideList" v-show="listShow"></div>
     </transition>
+>>>>>>> 010bed824e8cbd3257c4eaf967722888f4a3f69d
   </div>
 </template>
 
